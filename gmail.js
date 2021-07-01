@@ -3,9 +3,8 @@ require('dotenv').config();
 const puppeteer = require("puppeteer-extra");
 const pluginStealth = require("puppeteer-extra-plugin-stealth");
 
-const accountSid = 'AC0b8e193884a58c186ec1aa3a85f29229'; 
-const authToken = 'dad0bed96d0be1f38e7847974cf24acf'; 
-const client = require('twilio')(accountSid, authToken); 
+
+const client = require('twilio')(process.env.ACCOUNT_SID, process.env.ACCOUNT_TOKEN); 
  
 const readline = require('readline');
 async function readLine() {
